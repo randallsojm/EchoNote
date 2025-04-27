@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinuteMinds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="EchoNote Logo" class="logo">
+            </div>
+            <h1 class="title">EchoNote</h1>
+            <p class="tagline">Capture. Summarize. Understand.</p>
+        </header>
+        <div class="button-container">
+            <button id="start-btn" class="btn start-btn">Start Recording</button>
+            <button id="stop-btn" class="btn stop-btn hidden" disabled>Stop Recording</button> <!-- Initially hidden -->
+            <input type="file" id="audioFileInput" accept="audio/*" style="display: none;">
+            <button id="upload-btn" class="btn upload-btn">Upload Audio</button>
+
+            <!-- Translucent overlay with spinner -->
+            <div id="loading-overlay" class="hidden">
+                <div id="loading-spinner-container">
+                    <div class="spinner"></div>
+                    <p>Uploading audio...</p> <!-- Optional text -->
+                </div>
+            </div>
+        </div>
+        <!-- Display Saved Documents -->
+        <h2 id="savedDocumentsHeader" style="display: none;">Saved Documents</h2>
+        <div id="documentsList" class="documents-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

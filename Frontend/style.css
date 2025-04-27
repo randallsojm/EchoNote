@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Liberation Sans', sans-serif;
+    background-color: #F4F7FC;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    position: relative; /* To position the overlay relative to this container */
+    background-color: #ffffff; /* Normal background */
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    min-height: 400px;  /* Ensure there is enough height for the content */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+
+/* Header Section */
+header {
+    margin-bottom: 30px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+/* Title Styling */
+h1.title {
+    font-family: 'Mandali', sans-serif;
+    font-size: 3rem;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+/* Tagline Styling */
+.tagline {
+    font-size: 1.2rem;
+    color: #7F8C8D;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Button Styling */
+.controls {
+    margin-top: 30px;
+}
+
+/* .btn class */
+.btn {
+    padding: 15px 35px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+    width: 200px;
+    margin: 10px;
+}
+
+/* .start-btn class  */
+.start-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.start-btn:hover {
+    background-color: #45a049;
+}
+
+/* Stop Button */
+.stop-btn {
+    background-color: #FF5733;
+    color: white;
+    display: none;
+}
+
+.stop-btn:hover {
+    background-color: #e04e2b;
+}
+
+/* Upload Button (Visible from the Start) */
+.upload-btn {
+    background-color: #008CBA;
+    color: white;
+}
+
+.upload-btn:hover {
+    background-color: #007B9A;
+}
+
+/* Disabled Button State */
+#upload-btn:disabled,
+#stop-btn:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+/* Styling Feedback: This CSS provides clear visual feedback to the user, indicating that these buttons are not clickable at the moment. */
+
+/* Ensure the button-container is positioned relative */
+.button-container {
+    position: relative; /* This allows us to position the spinner inside it */
+}
+/* The .button-container element is positioned relative to its default position, and any child elements with position: absolute will be positioned inside it relative to the .button-container (not the entire page). */
+
+/* Position the loading overlay absolutely in the button-container */
+#loading-overlay {
+    position: absolute; /* Position it absolutely within the .button-container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Initially hidden */
+    justify-content: center; /* Center spinner and text horizontally */
+    align-items: center; /* Center spinner and text vertically */
+    z-index: 1; /* Ensure it's above the buttons */
+}
+
+/* Center the spinner and text inside the overlay */
+#loading-spinner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Spinner style */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%; /*makes the loading circular */
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+/* Text style */
+/* p refers to paragraph elements (<p>) inside the element with the ID loading-overlay. */
+#loading-overlay p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #2C3E50;
+    font-weight: bold;
+}
+
+/* Animation for spinner */
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#savedDocumentsHeader {
+    display: none;
+}
+
+.documents-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.document-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.document-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.document-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.document-card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* @keyframes is an at-rule that defines a named animation called spin.
+The spin animation specifies how the element should behave over time, in this case, rotating from 0deg to 360deg.
+The 0% and 100% represent the starting and ending states of the animation, respectively. */
+
+
+
+
+/* the # symbol is used to select an element by its ID */
+/* The . symbol is used to select elements by their class */
+/* 
+ID:
+
+    Unique: An ID must be unique within a page. Only one element can have a specific ID.
+    It is used to identify a single unique element in the document.
+
+Class:
+
+    Non-unique: A class can be used on multiple elements. Several elements can share the same class and thus have the same styles applied to them. */
+
+
+
+
+
+
+
+
+
+/* /usr/share/fonts/truetype/teluguvijayam/Mandali-Regular.ttf */
+/* /usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf */

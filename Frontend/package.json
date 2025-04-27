@@ -1,0 +1,20 @@
+{
+    "name": "audio-recorder",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+    "start": "lite-server"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "child_process": "^1.0.2",
+      "express": "^4.21.2",
+      "multer": "^1.4.5-lts.1"
+    },
+    "devDependencies": {
+      "lite-server": "^2.6.1"
+    }
+  }
